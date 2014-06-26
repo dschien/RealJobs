@@ -13,7 +13,7 @@ class Worker extends ReLogoTurtle {
 	
 	Job job = null
 	double increment = 1
-	
+	double learningRate = 1
 	/**
 	 * Increment completion level by increment if completion level less than requirements
 	 * @return
@@ -22,7 +22,7 @@ class Worker extends ReLogoTurtle {
 		if (this.job && this.job.completionLevel < this.job.requirements){
 			this.job.completionLevel += increment
 		}
-		
+		increment += learningRate
 		
 	}
 	
